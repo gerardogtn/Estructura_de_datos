@@ -10,7 +10,7 @@
 using namespace std;
 
 void hanoi(int, int, int, int);
-int isNumDisksValid(int);
+int verifyNumDisks(int);
 
 /*
  * Initializes the hanoi-solving algorithm. 
@@ -25,7 +25,8 @@ int main(int argc, const char * argv[]) {
     cout << "Input the number of disks: ";
     cin >> numDisks;
     
-    numDisks = isNumDisksValid(numDisks);
+    numDisks = verifyNumDisks(numDisks);
+    // Precondition is enforced when main executes hanoi.
     hanoi(numDisks, 1, 3, 2);
     
     return 0;
@@ -53,11 +54,12 @@ void hanoi(int numDisks, int origin, int destination, int aux){
  * EFFECTS:  If the parameter is less than one, prompts the user to enter another integer. 
  *           Otherwise, it returns the value of the parameter. 
  */
-int isNumDisksValid(int numDisks){
+int verifyNumDisks(int numDisks){
     if (numDisks < 1){
-        cout << "The number of disks must be greater than zero. ";
+        cout << "The number of disks must be greater than zero. \n" << "Input the number of disks: ";
         cin >> numDisks;
-        return numDisks;
+        numDisks = verifyNumDisks(numDisks);
     }
-    else return numDisks;
+    
+    return numDisks;
 }
