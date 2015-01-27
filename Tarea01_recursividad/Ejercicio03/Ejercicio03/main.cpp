@@ -11,10 +11,8 @@
 using namespace std;
 
 int numPaths(int x, int y);
-int makeDivisibleByThree(int x);
-int makeDivisibleByTwo(int x);
-int verifyN(int n);
-int verifyM(int n);
+bool isNValid(int n);
+bool isMValid(int m);
 
 int main(int argc, const char * argv[]) {
     
@@ -23,25 +21,23 @@ int main(int argc, const char * argv[]) {
     
     cout << "Inserte el valor de n (numero de columnas)" << endl;
     cin >> n;
-    verifyN(n);
     
     cout << "Inserte el valor de m (numero de filas)" << endl;
     cin >> m;
-    verifyM(m);
     
-    cout << "El numero de caminos distintos es: " << numPaths(n, m) << endl;
-    return numPaths(n, m);
+    if (isNValid(n) && isMValid(m)){
+        cout << "El numero de caminos distintos es: " << numPaths(n - 1, m -1) << endl;
+    }
+    else if (!isNValid(n)){
+        cout << "No es posible calcular el numero de caminos distintos, ya que el valor de n es invalido."
+        << "Un valor valido de n es un numero positivo tal que n - 1 sea multiplo de tres." <<endl;
+    }
+    else{
+        cout << "No es posible calcular el numero de caminos distintos, ya que el valor de m es invalido."
+        << " Un valor valido de n debe de ser un numero non mayor que uno." <<endl;
+    }
     
-//    
-//    cout << (numPaths(0, 0 ) == 0) << endl;
-//    cout << (numPaths(3, 0 ) == 1) << endl;
-//    cout << (numPaths(0, 2 ) == 1) << endl;
-//    cout << (numPaths(3, 2 ) == 2) << endl;
-//    cout << (numPaths(6, 2 ) == 3) << endl;
-//    cout << (numPaths(3, 4 ) == 3) << endl;
-//    cout << (numPaths(6, 4 ) == 6) << endl;
-    
-    return 0;
+
 }
 
 
@@ -66,54 +62,30 @@ int numPaths(int x, int y){
     return result;
 }
 
+
 // Requires: None.
-// Modifies: x.
-// Effects:  Returns the next integer that is divisible by three.
-int makeDivisibleByThree(int x){
+// Modifies: None.
+// Effects:  Returns true if the input is valid [if (n-1) is a multiple of 3]. False otherwise.
+bool isNValid(int n){
     
-    if (x % 3 != 0){
-        x = x + 1;
+    if (n > 0) {
+        int r = (n -1) % 3;
+        return r == 0;
     }
-    
-    return makeDivisibleByThree(x);
-}
-
-
-// Requires: None.
-// Modifies: y.
-// Effects:  Returns the next integer that is divisible by two.
-int makeDivisibleByTwo(int y){
-
-    if (y % 2 != 0){
-        y = y + 1;
+    else{
+        return false;
     }
-    
-    return makeDivisibleByTwo(y);
 }
 
 // Requires: None.
-// Modifies: n
-// Effects:  Verifies that n is a valid input.
-int verifyN(int n){
-    if ( n < 0){
-        cout << "El valor de n es menor que cero. Inserte un nuevo valor de n." << endl;
-        cin >> n;
-        return verifyN(n);
+// Modifies: None.
+// Effects:  Returns true if the input is valid [if (n-1) is a multiple of 2]. False otherwise.
+bool isMValid(int m){
+    if (m > 0) {
+        int r = (m -1) % 2;
+        return r == 0;
     }
-    else
-        return n;
-}
-
-// Requires: None.
-// Modifies: m
-// Effects:  Verifies that n is a valid input.
-int verifyM(int m){
-    if ( m < 0){
-        cout << "El valor de m es menor que cero. Inserte un nuevo valor de n." << endl;
-        cin >> m;
-        return verifyN(m);
+    else{
+        return false;
     }
-    else
-        return m;
 }
-
