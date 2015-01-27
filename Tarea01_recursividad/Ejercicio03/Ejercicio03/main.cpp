@@ -65,7 +65,7 @@ int numPaths(int x, int y){
 
 // Requires: None.
 // Modifies: None.
-// Effects:  Returns true if the input is valid [if (n-1) is a multiple of 3]. False otherwise.
+// Effects:  Returns true if the input is valid [if (n-1) is a positive multiple of 3]. False otherwise.
 bool isNValid(int n){
     
     if (n > 0) {
@@ -79,7 +79,7 @@ bool isNValid(int n){
 
 // Requires: None.
 // Modifies: None.
-// Effects:  Returns true if the input is valid [if (n-1) is a multiple of 2]. False otherwise.
+// Effects:  Returns true if the input is valid [if (n-1) is a positive multiple of 2]. False otherwise.
 bool isMValid(int m){
     if (m > 0) {
         int r = (m -1) % 2;
