@@ -14,21 +14,13 @@
 using namespace std;
 
 void printMatrix(int matrix[N][N]);
-int powersOfTwo(int rows, int columns, int power);
+void powersOfTWoMatrix(int matrix[N][N], int curentRow, int curentColumn, int n, int result);
 
 
 int main(int argc, const char * argv[]) {
     int matrix[N][N] = {0};
     
-    for (int i = 0; i < N; i++){
-        for (int j = 0; j < N; j++) {
-            matrix[i][j] = powersOfTwo(i, j, 0);
-        }
-    }
-    
-    cout<< pow(2, 0);
-    
-    std::cout << "Hello, World!\n" /*<<  powersOfTwoMatrix(matrix, 0)*/ << endl;
+    powersOfTWoMatrix(matrix, 0, 0, N, 1);
     printMatrix(matrix);
     return 0;
 }
@@ -47,16 +39,25 @@ void printMatrix(int m[N][N])
 }
 
 
-// REQUIRES: rows and columns are natural numbers. power is a positive integer.
-// MODIFIES: none.
-// EFFECTS:  finds two to the power of the minimum of (rows and columns) recursively.
-int powersOfTwo(int rows, int columns, int power){
-    int result = 1 ;
+void powersOfTWoMatrix(int matrix[N][N], int currentRow, int currentColumn, int n, int result){
+
     
-    if (rows != 0 && columns != 0){
-        result = 2 * powersOfTwo(rows - 1, columns -1, power + 1);
+    if (currentRow == n - 1 && currentColumn == n - 1 ) {
+        matrix[currentRow][currentColumn] = result;
     }
-  
-    return result;
+    else if (currentRow == n - 1){
+        matrix[currentRow][currentColumn] = result;
+        powersOfTWoMatrix(matrix, currentRow, currentColumn + 1, n, result);
+    }
+    else if (currentColumn == n - 1){
+        matrix[currentRow][currentColumn] = result;
+        powersOfTWoMatrix(matrix, currentRow + 1, currentColumn, n, result);
+    }
+    else{
+        matrix[currentRow][currentColumn] = result;
+        powersOfTWoMatrix(matrix, currentRow + 1 , currentColumn, N, result);
+        powersOfTWoMatrix(matrix, currentRow, currentColumn + 1, N, result);
+        powersOfTWoMatrix(matrix, currentRow + 1, currentColumn + 1, N, result * 2);
+    }
     
 }
