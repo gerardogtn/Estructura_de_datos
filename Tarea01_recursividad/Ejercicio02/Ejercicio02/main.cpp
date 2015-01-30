@@ -31,22 +31,33 @@ int main(int argc, const char * argv[]) {
                         {-1,  0, -1, -1},
                         {-1,  0,  0,  0}};
     
-    cout << MAZE1 << MAZE2 << MAZE3 << endl; // STUB.
-    
     cout << ((solveMaze(0, 0, MAZE1))? "MAZE1 IS SOLVABLE. " : "MAZE1 IS NOT SOLVABLE. ") << endl;
     cout << ((solveMaze(0, 0, MAZE2))? "MAZE2 IS SOLVABLE. " : "MAZE2 IS NOT SOLVABLE. ") << endl;
     cout << ((solveMaze(0, 0, MAZE3))? "MAZE3 IS SOLVABLE. " : "MAZE3 IS NOT SOLVABLE. ") << endl;
-        
+    
     return 0;
 }
 
 
-// REQUIRES: A two dimensional array.
+// REQUIRES: None.
 // MODIFIES: None.
 // EFFECTS:  Produces true if:
 bool solveMaze(int x, int y, int matrix[N][N]){
+    bool result = false;
     
     
-    return false; //stub
+    if (x == N - 1 && y == N - 1){
+        result = true;
+    }
+    else{
+        if (matrix[x+ 1][y] != -1 && x + 1 != N){
+            solveMaze(x + 1, y, matrix);
+        }
+        else if (matrix[x][y + 1] != -1 && y + 1 != N){
+            solveMaze(x, y + 1, matrix);
+        }
+    }
+    
+    return result;
     
 }
