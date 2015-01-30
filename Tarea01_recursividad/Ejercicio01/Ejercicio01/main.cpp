@@ -40,7 +40,6 @@ void printMatrix(int m[N][N])
 
 
 void powersOfTWoMatrix(int matrix[N][N], int currentRow, int currentColumn, int n, int result){
-
     
     if (currentRow == n - 1 && currentColumn == n - 1 ) {
         matrix[currentRow][currentColumn] = result;
