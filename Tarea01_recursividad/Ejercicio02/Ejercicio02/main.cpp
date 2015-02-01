@@ -14,7 +14,6 @@ using namespace std;
 bool solveMaze(int x, int y, int matrix[N][N]);
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
     
     int MAZE1[N][N] = { { 0, 0, -1, -1},
                         {-1, 0, -1, -1},
@@ -31,9 +30,20 @@ int main(int argc, const char * argv[]) {
                         {-1,  0, -1, -1},
                         {-1,  0,  0,  0}};
     
-    cout << ((solveMaze(0, 0, MAZE1))? "MAZE1 IS SOLVABLE. " : "MAZE1 IS NOT SOLVABLE. ") << endl;
-    cout << ((solveMaze(0, 0, MAZE2))? "MAZE2 IS SOLVABLE. " : "MAZE2 IS NOT SOLVABLE. ") << endl;
+    int MAZE4[N][N] = { { 0,  0,  0,  0},
+                        {-1,  0, -1,  0},
+                        {-1,  -1, -1,  0},
+                        {-1,  0,  0,  0}};
+    
+    cout << "MAZE1 SHOULD BE SOLVABLE. " << endl;
+    cout << "MAZE2 SHOULD NOT BE SOLVABLE. " << endl;
+    cout << "MAZE3 SHOULD BE SOLVABLE." << endl;
+    cout << "MAZE4 SHOULD BE SOLVABLE. \n" << endl;
+    
+    //cout << ((solveMaze(0, 0, MAZE1))? "MAZE1 IS SOLVABLE. " : "MAZE1 IS NOT SOLVABLE. ") << endl;
+    //cout << ((solveMaze(0, 0, MAZE2))? "MAZE2 IS SOLVABLE. " : "MAZE2 IS NOT SOLVABLE. ") << endl;
     cout << ((solveMaze(0, 0, MAZE3))? "MAZE3 IS SOLVABLE. " : "MAZE3 IS NOT SOLVABLE. ") << endl;
+    cout << ((solveMaze(0, 0, MAZE4))? "MAZE4 IS SOLVABLE. " : "MAZE4 IS NOT SOLVABLE. ") << endl;
     
     return 0;
 }
@@ -41,20 +51,23 @@ int main(int argc, const char * argv[]) {
 
 // REQUIRES: None.
 // MODIFIES: None.
-// EFFECTS:  Produces true if:
+// EFFECTS:  Produces true if the maze can be solved.
 bool solveMaze(int x, int y, int matrix[N][N]){
-    bool result = false;
+    bool result;
     
     
     if (x == N - 1 && y == N - 1){
         result = true;
     }
+    else if (result == true){
+        return true;
+    }
     else{
         if (matrix[x+ 1][y] != -1 && x + 1 != N){
-            solveMaze(x + 1, y, matrix);
+            (solveMaze(x + 1, y, matrix) == true)? result = true : result = false;
         }
         else if (matrix[x][y + 1] != -1 && y + 1 != N){
-            solveMaze(x, y + 1, matrix);
+            (solveMaze(x, y + 1, matrix) == true)? result = true : result = false;
         }
     }
     
