@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Busqueda.xcscheme</key>
+		<key>GenericSearch.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>D4FD61171A76D61D009CA3F8</key>
+		<key>D4C256B21A9160F1000975DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

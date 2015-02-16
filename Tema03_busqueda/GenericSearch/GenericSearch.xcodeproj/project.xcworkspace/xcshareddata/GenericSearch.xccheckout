@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2F020573-92AD-44DE-AE39-771904F0FF05</string>
+	<string>1C181500-2054-4AD8-9A0F-BA7C467B8946</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Busqueda</string>
+	<string>GenericSearch</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>BA2B7A3B814248ABD71812296049000238C85E4A</key>
 		<string>https://github.com/gerardogtn/Estructura_de_datos.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Tema03_busqueda/Busqueda/Busqueda.xcodeproj</string>
+	<string>Tema03_busqueda/GenericSearch/GenericSearch.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>BA2B7A3B814248ABD71812296049000238C85E4A</key>

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Busqueda.xcodeproj">
+      location = "self:GenericSearch.xcodeproj">
    </FileRef>
 </Workspace>

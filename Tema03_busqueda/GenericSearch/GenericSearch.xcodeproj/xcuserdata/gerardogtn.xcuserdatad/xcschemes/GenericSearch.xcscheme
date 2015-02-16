@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D4FD61171A76D61D009CA3F8"
-               BuildableName = "Busqueda"
-               BlueprintName = "Busqueda"
-               ReferencedContainer = "container:Busqueda.xcodeproj">
+               BlueprintIdentifier = "D4C256B21A9160F1000975DD"
+               BuildableName = "GenericSearch"
+               BlueprintName = "GenericSearch"
+               ReferencedContainer = "container:GenericSearch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D4FD61171A76D61D009CA3F8"
-            BuildableName = "Busqueda"
-            BlueprintName = "Busqueda"
-            ReferencedContainer = "container:Busqueda.xcodeproj">
+            BlueprintIdentifier = "D4C256B21A9160F1000975DD"
+            BuildableName = "GenericSearch"
+            BlueprintName = "GenericSearch"
+            ReferencedContainer = "container:GenericSearch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D4FD61171A76D61D009CA3F8"
-            BuildableName = "Busqueda"
-            BlueprintName = "Busqueda"
-            ReferencedContainer = "container:Busqueda.xcodeproj">
+            BlueprintIdentifier = "D4C256B21A9160F1000975DD"
+            BuildableName = "GenericSearch"
+            BlueprintName = "GenericSearch"
+            ReferencedContainer = "container:GenericSearch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D4FD61171A76D61D009CA3F8"
-            BuildableName = "Busqueda"
-            BlueprintName = "Busqueda"
-            ReferencedContainer = "container:Busqueda.xcodeproj">
+            BlueprintIdentifier = "D4C256B21A9160F1000975DD"
+            BuildableName = "GenericSearch"
+            BlueprintName = "GenericSearch"
+            ReferencedContainer = "container:GenericSearch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
